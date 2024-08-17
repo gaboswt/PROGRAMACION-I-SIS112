@@ -24,13 +24,13 @@ def menu():
 
 def selec_oper(oper, num1, num2):
     if oper == 1:
-        return Sum(a,b)
+        return Sum(num1, num2)
     elif oper == 2:
-        return rest(a,b)
+        return rest(num1, num2)
     elif oper == 3:
-        return mult(a,b)
+        return mult(num1, num2)
     elif oper == 4:
-        divi(a,b)
+        return divi(num1, num2)
 
 def calcu():
     while True:
