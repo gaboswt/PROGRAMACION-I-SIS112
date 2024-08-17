@@ -1,19 +1,19 @@
-def sumar(a, b):
+def Sum(a, b):
     return a + b
 
-def restar(a, b):
+def rest(a, b):
     return a - b
 
-def multiplicar(a, b):
+def mult(a, b):
     return a * b
 
-def dividir(a, b):
+def divi(a, b):
     if b != 0:
         return a / b
     else:
-        return "Error: División por cero no es permitida."
+        return "No existe"  # Asegúrate de devolver un valor
 
-def mostrar_menu():
+def menu():
     print("BIENVENIDO A LA CALCULADORA VIRTUAL :)")
     print("-------------------")
     print("1.- Suma")
@@ -22,36 +22,37 @@ def mostrar_menu():
     print("4.- División")
     print("5.- Salir")
 
-def obtener_resultado(operacion, num1, num2):
-    if operacion == 1:
-        return sumar(num1, num2)
-    elif operacion == 2:
-        return restar(num1, num2)
-    elif operacion == 3:
-        return multiplicar(num1, num2)
-    elif operacion == 4:
-        return dividir(num1, num2)
+def selec_oper(oper, num1, num2):
+    if oper == 1:
+        return Sum(num1, num2)
+    elif oper == 2:
+        return rest(num1, num2)
+    elif oper == 3:
+        return mult(num1, num2)
+    elif oper == 4:
+        return divi(num1, num2)
 
-def calculadora():
+def calcu():
     while True:
-        num1 = int(input("-Ingresa el primer número: "))
-        num2 = int(input("-Ingresa el segundo número: "))
-
-        mostrar_menu()
+        num1 = int(input("Ingresa el primer número: "))
+        num2 = int(input("Ingresa el segundo número: "))
+        menu()
         oper = int(input("->"))
 
         if 1 <= oper <= 4:
-            resultado = obtener_resultado(oper, num1, num2)
+            resultado = selec_oper(oper, num1, num2)
             print(f"El resultado es: {resultado}")
         elif oper == 5:
-            print("Gracias por su preferencia :)")
+            print("Gracias por jugar :)")
             break
-        else:
-            print("-Ingrese un valor en el rango establecido-")
-        
-        repetir = int(input("¿Desea realizar otra operación? (1 = sí, 2 = no): "))
+        else: 
+            print("-Valor no válido-")
+
+        print("¿Quieres repetir la calculadora?")
+        print("Si=1, No= 2")
+        repetir = int(input("->"))
         if repetir != 1:
             print("Gracias por su preferencia :)")
             break
 
-calculadora()
+calcu()
