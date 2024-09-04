@@ -14,7 +14,8 @@ def datos():
     return notas
 
 def calculo(notas):
-    return sum(notas) / len(notas)
+    promedio = sum(notas) / len(notas)
+    return promedio
 
 def mostrar(promedio, num):
     print("")
@@ -25,6 +26,6 @@ def main():
     print("CALCULADORA DE PROMEDIO :)")
     print(" ")
     notas = datos()
-    promedio = calculo(notas)
+    promedio= calculo(notas)
     mostrar(promedio, len(notas))
 main()
