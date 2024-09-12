@@ -1,4 +1,5 @@
 def datos():
+    est = []
     notas = []
     while True:
         num = int(input("-Ingrese la cantidad de estudiantes: "))
