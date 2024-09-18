@@ -3,13 +3,13 @@ lista=["hola", "adios", "progra", "ucb", "biomedica"]
 palsec = random.choice(lista)
 intentos = 10
 palnoencontrada = ["_"] * len(palsec)
-print("".join(palnoencontrada))
+print(palnoencontrada)
 for i in range (intentos):
-    new = input("Ingresa letra: ")
+    new = input("Ingresa una letra: ")
     for j in range(len(palsec)):
         if new == palsec[j]:
             palnoencontrada[j]=new
-    print("".join(palnoencontrada))
+    print(palnoencontrada)
     if "_" not in palnoencontrada:
         print("¡FELCIDADES, encontraste la palabra!")
 else:
