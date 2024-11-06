@@ -7,4 +7,4 @@ matriz=[
     [4,5,6], 
     [7,8,9]
 ]
-print(matriz[1][2])
+print(matriz[0][2]) #[0,1,2] filas [0,1,2] columnas
